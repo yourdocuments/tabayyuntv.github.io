@@ -3,2817 +3,390 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Tabayyun TV — Understand the Quran</title>
-
-<meta name="description"
-content="Tabayyun TV — Quran, Arabic, Tafsir, Courses, Scholars and Live Islamic learning.">
-
+<meta name="description" content="Tabayyun TV — Quran, Arabic, Tafsir, Courses, Scholars and Live Islamic learning.">
 <link rel="icon" href="assets/logo.svg">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
 <style>
-
-/* =========================================================
-   TABAYYUN TV — PREMIUM PUBLIC WEBSITE
-   ========================================================= */
-
 :root{
-    --green:#07583f;
-    --green-dark:#03251b;
-    --green-light:#0c7655;
-    --gold:#c9a65b;
-    --gold-light:#e1c77e;
-
-    --cream:#f7f5ee;
-    --cream-2:#eef2eb;
-
-    --white:#ffffff;
-    --black:#10221b;
-
-    --text:#25362f;
-    --muted:#718078;
-
-    --border:#dfe6df;
-
-    --shadow:
-        0 25px 70px rgba(2,35,25,.12);
-
-    --radius:16px;
-}
-
-/* ================= RESET ================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-
-    background:var(--cream);
-    color:var(--text);
-
-    line-height:1.6;
-
-    overflow-x:hidden;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-button,
-input{
-    font:inherit;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-/* ================= CONTAINER ================= */
-
-.container{
-    width:min(1240px,92%);
-    margin:auto;
-}
-
-/* ================= HEADER ================= */
-
-.header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    height:82px;
-
-    background:
-        rgba(247,245,238,.92);
-
-    backdrop-filter:blur(18px);
-
-    border-bottom:
-        1px solid rgba(0,0,0,.05);
-}
-
-.header-inner{
-    height:100%;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    gap:30px;
-}
-
-/* ================= BRAND ================= */
-
-.brand{
-    display:flex;
-    align-items:center;
-
-    gap:11px;
-
-    min-width:max-content;
-}
-
-.brand-logo{
-    width:42px;
-    height:42px;
-
-    object-fit:contain;
-
-    border-radius:10px;
-}
-
-.brand-name{
-    font-family:Georgia,serif;
-
-    font-size:20px;
-
-    font-weight:700;
-
-    color:var(--green-dark);
-
-    letter-spacing:-.4px;
-}
-
-/* ================= NAV ================= */
-
-.nav{
-    display:flex;
-    align-items:center;
-
-    gap:25px;
-}
-
-.nav a{
-    position:relative;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    color:#52615a;
-
-    transition:.25s;
-}
-
-.nav a:hover{
-    color:var(--green);
-}
-
-.nav a::after{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    bottom:-8px;
-
-    width:0;
-    height:2px;
-
-    background:var(--gold);
-
-    transition:.25s;
-}
-
-.nav a:hover::after{
-    width:100%;
-}
-
-/* ================= HEADER ACTIONS ================= */
-
-.header-actions{
-    display:flex;
-    align-items:center;
-    gap:18px;
-}
-
-.login-link{
-    font-size:13px;
-    font-weight:800;
-
-    color:var(--green-dark);
-}
-
-.btn{
-    display:inline-flex;
-
-    align-items:center;
-    justify-content:center;
-
-    gap:12px;
-
-    min-height:48px;
-
-    padding:0 22px;
-
-    border-radius:9px;
-
-    background:var(--green);
-
-    color:#fff;
-
-    font-size:13px;
-
-    font-weight:800;
-
-    border:1px solid var(--green);
-
-    cursor:pointer;
-
-    box-shadow:
-        0 12px 25px rgba(7,88,63,.18);
-
-    transition:
-        transform .25s,
-        background .25s,
-        box-shadow .25s;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-
-    background:var(--green-light);
-
-    box-shadow:
-        0 18px 32px rgba(7,88,63,.23);
-}
-
-.btn-gold{
-    background:var(--gold);
-    border-color:var(--gold);
-
-    color:var(--green-dark);
-}
-
-.btn-gold:hover{
-    background:var(--gold-light);
-}
-
-/* ================= MOBILE MENU ================= */
-
-.menu-btn{
-    display:none;
-
-    border:0;
-    background:transparent;
-
-    color:var(--green-dark);
-
-    font-size:25px;
-
-    cursor:pointer;
-}
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero{
-    position:relative;
-
-    min-height:
-        calc(100vh - 82px);
-
-    display:grid;
-
-    grid-template-columns:
-        1.05fr .95fr;
-
-    align-items:center;
-
-    gap:60px;
-
-    padding:
-        80px 0 90px;
-
-    background:
-        radial-gradient(
-            circle at 82% 20%,
-            #dce9dc 0,
-            #f7f5ee 34%,
-            #f7f5ee 70%
-        );
-
-    overflow:hidden;
-}
-
-.hero::before{
-    content:"";
-
-    position:absolute;
-
-    width:600px;
-    height:600px;
-
-    border-radius:50%;
-
-    border:
-        1px solid rgba(7,88,63,.08);
-
-    right:-230px;
-    top:-230px;
-}
-
-.hero-content{
-    position:relative;
-
-    z-index:2;
-}
-
-.hero-label{
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:9px;
-
-    color:var(--green);
-
-    font-size:11px;
-
-    font-weight:900;
-
-    letter-spacing:2px;
-
-    margin-bottom:20px;
-}
-
-.hero-label::before{
-    content:"";
-
-    width:30px;
-    height:1px;
-
-    background:var(--gold);
-}
-
-.hero-title{
-    font-family:Georgia,serif;
-
-    color:var(--green-dark);
-
-    font-size:
-        clamp(48px,6vw,78px);
-
-    line-height:1.02;
-
-    letter-spacing:-3.5px;
-
-    margin-bottom:26px;
-}
-
-.hero-title span{
-    color:var(--green);
-
-    font-style:italic;
-}
-
-.hero-description{
-    max-width:610px;
-
-    color:#66756e;
-
-    font-size:17px;
-
-    line-height:1.8;
-
-    margin-bottom:32px;
-}
-
-.hero-actions{
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:12px;
-
-    margin-bottom:30px;
-}
-
-.btn-outline{
-    background:transparent;
-
-    color:var(--green);
-
-    border-color:#bdcbc3;
-
-    box-shadow:none;
-}
-
-.btn-outline:hover{
-    background:#fff;
-
-    color:var(--green);
-
-    border-color:var(--green);
-}
-
-.hero-features{
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:22px;
-
-    color:#6b7972;
-
-    font-size:11px;
-
-    font-weight:700;
-}
-
-.hero-features span{
-    display:flex;
-    align-items:center;
-    gap:7px;
-}
-
-.hero-features span::before{
-    content:"✓";
-
-    color:var(--green);
-
-    font-weight:900;
-}
-
-/* ================= HERO VISUAL ================= */
-
-.hero-visual{
-    position:relative;
-
-    min-height:510px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-}
-
-.hero-glow{
-    position:absolute;
-
-    width:430px;
-    height:430px;
-
-    border-radius:50%;
-
-    background:
-        radial-gradient(
-            circle,
-            #d4e4d6,
-            #e9eee5 65%,
-            transparent 70%
-        );
-}
-
-.quran-card{
-    position:relative;
-
-    width:min(410px,90%);
-
-    padding:42px 35px;
-
-    border-radius:22px;
-
-    color:#fff;
-
-    background:
-        linear-gradient(
-            145deg,
-            #0b6246,
-            #03261c
-        );
-
-    box-shadow:
-        0 40px 90px
-        rgba(2,38,27,.30);
-
-    overflow:hidden;
-}
-
-.quran-card::before{
-    content:"";
-
-    position:absolute;
-
-    inset:14px;
-
-    border:1px solid
-        rgba(201,166,91,.35);
-
-    border-radius:15px;
-
-    pointer-events:none;
-}
-
-.quran-decoration{
-    position:absolute;
-
-    right:-30px;
-    top:-45px;
-
-    font-size:180px;
-
-    color:rgba(201,166,91,.07);
-
-    font-family:Georgia,serif;
-}
-
-.quran-symbol{
-    position:relative;
-
-    text-align:center;
-
-    color:var(--gold);
-
-    font-size:58px;
-
-    margin-bottom:8px;
-}
-
-.quran-label{
-    position:relative;
-
-    text-align:center;
-
-    color:#c4d3cc;
-
-    font-size:9px;
-
-    letter-spacing:2px;
-
-    font-weight:800;
-}
-
-.quran-card h2{
-    position:relative;
-
-    font-family:Georgia,serif;
-
-    font-style:italic;
-
-    text-align:center;
-
-    font-weight:400;
-
-    font-size:27px;
-
-    line-height:1.45;
-
-    margin:24px 0 16px;
-}
-
-.quran-reference{
-    position:relative;
-
-    text-align:center;
-
-    color:#b5c6be;
-
-    font-size:11px;
-}
-
-/* ================= MINI PLAYER ================= */
-
-.mini-player{
-    position:relative;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:13px;
-
-    margin-top:30px;
-
-    padding:13px;
-
-    background:
-        rgba(255,255,255,.08);
-
-    border:
-        1px solid rgba(255,255,255,.09);
-
-    border-radius:12px;
-}
-
-.play-button{
-    width:36px;
-    height:36px;
-
-    flex:none;
-
-    display:grid;
-    place-items:center;
-
-    border-radius:50%;
-
-    background:var(--gold);
-
-    color:var(--green-dark);
-
-    font-size:11px;
-}
-
-.mini-player-info{
-    flex:1;
-}
-
-.mini-player-info strong{
-    display:block;
-
-    font-size:11px;
-}
-
-.mini-player-info small{
-    display:block;
-
-    color:#b3c5bc;
-
-    font-size:9px;
-
-    margin-top:2px;
-}
-
-.progress-number{
-    color:var(--gold);
-
-    font-size:10px;
-
-    font-weight:800;
-}
-
-/* =========================================================
-   STATS
-   ========================================================= */
-
-.stats{
-    background:#fff;
-
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-}
-
-.stat{
-    text-align:center;
-
-    padding:29px 15px;
-
-    border-right:
-        1px solid var(--border);
-}
-
-.stat:last-child{
-    border-right:0;
-}
-
-.stat-number{
-    display:block;
-
-    color:var(--green);
-
-    font-family:Georgia,serif;
-
-    font-size:29px;
-
-    font-weight:700;
-}
-
-.stat-label{
-    color:var(--muted);
-
-    font-size:11px;
-
-    font-weight:600;
-}
-
-/* =========================================================
-   SECTION
-   ========================================================= */
-
-.section{
-    padding:100px 0;
-}
-
-.section-heading{
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:flex-end;
-
-    gap:30px;
-
-    margin-bottom:38px;
-}
-
-.kicker{
-    color:var(--green);
-
-    font-size:10px;
-
-    font-weight:900;
-
-    letter-spacing:2px;
-}
-
-.section-title{
-    font-family:Georgia,serif;
-
-    font-size:
-        clamp(35px,4vw,52px);
-
-    line-height:1.1;
-
-    color:var(--green-dark);
-
-    margin-top:9px;
-}
-
-.section-description{
-    max-width:410px;
-
-    color:var(--muted);
-
-    font-size:13px;
-}
-
-/* =========================================================
-   LEARNING PATH
-   ========================================================= */
-
-.path-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:18px;
-}
-
-.path-card{
-    position:relative;
-
-    background:#fff;
-
-    border:1px solid var(--border);
-
-    border-radius:var(--radius);
-
-    padding:32px;
-
-    min-height:245px;
-
-    transition:.3s;
-}
-
-.path-card:hover{
-    transform:translateY(-5px);
-
-    box-shadow:var(--shadow);
-}
-
-.path-card.featured{
-    background:#e7efe8;
-
-    border-color:#d2e0d4;
-}
-
-.path-number{
-    color:var(--gold);
-
-    font-size:11px;
-
-    font-weight:900;
-
-    margin-bottom:28px;
-}
-
-.path-card h3{
-    font-family:Georgia,serif;
-
-    color:var(--green-dark);
-
-    font-size:27px;
-
-    margin-bottom:10px;
-}
-
-.path-card p{
-    color:var(--muted);
-
-    font-size:13px;
-
-    line-height:1.7;
-
-    margin-bottom:20px;
-}
-
-.path-link{
-    color:var(--green);
-
-    font-size:11px;
-
-    font-weight:900;
-}
-
-/* =========================================================
-   DARK COURSE SECTION
-   ========================================================= */
-
-.dark-section{
-    background:var(--green-dark);
-
-    color:#fff;
-}
-
-.dark-section .section-title{
-    color:#fff;
-}
-
-.dark-section .section-description{
-    color:#aabdb5;
-}
-
-.dark-section .kicker{
-    color:#d8bb70;
-}
-
-.view-link{
-    color:#d8bb70;
-
-    font-size:12px;
-
-    font-weight:900;
-}
-
-.course-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:20px;
-}
-
-.course-card{
-    overflow:hidden;
-
-    border-radius:15px;
-
-    background:#0a2c22;
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
-    transition:.3s;
-}
-
-.course-card:hover{
-    transform:translateY(-5px);
-
-    border-color:
-        rgba(201,166,91,.3);
-}
-
-.course-image{
-    height:195px;
-
-    padding:20px;
-
-    display:flex;
-
-    align-items:flex-start;
-
-    justify-content:space-between;
-
-    color:#fff;
-
-    background:
-        linear-gradient(
-            135deg,
-            #153f32,
-            #6d5834
-        );
-}
-
-.course-image.two{
-    background:
-        linear-gradient(
-            135deg,
-            #075940,
-            #16372c
-        );
-}
-
-.course-image.three{
-    background:
-        linear-gradient(
-            135deg,
-            #503e2b,
-            #0a2c22
-        );
-}
-
-.course-category{
-    font-size:9px;
-
-    letter-spacing:2px;
-
-    font-weight:900;
-}
-
-.course-index{
-    font-family:Georgia,serif;
-
-    font-size:70px;
-
-    line-height:1;
-
-    color:rgba(255,255,255,.12);
-}
-
-.course-content{
-    padding:24px;
-}
-
-.course-content small{
-    color:#a9bbb3;
-
-    font-size:10px;
-}
-
-.course-content h3{
-    font-family:Georgia,serif;
-
-    font-size:22px;
-
-    line-height:1.25;
-
-    margin:8px 0;
-}
-
-.course-meta{
-    color:#94aaa1;
-
-    font-size:10px;
-
-    margin-bottom:18px;
-}
-
-.course-link{
-    color:#d8bb70;
-
-    font-size:11px;
-
-    font-weight:900;
-}
-
-/* =========================================================
-   ARABIC SECTION
-   ========================================================= */
-
-.split-section{
-    display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:90px;
-
-    align-items:center;
-}
-
-.split-title{
-    font-family:Georgia,serif;
-
-    color:var(--green-dark);
-
-    font-size:
-        clamp(38px,4vw,54px);
-
-    line-height:1.1;
-
-    margin:10px 0 22px;
-}
-
-.split-description{
-    max-width:540px;
-
-    color:var(--muted);
-
-    font-size:14px;
-
-    line-height:1.8;
-
-    margin-bottom:28px;
-}
-
-.levels{
-    display:grid;
-
-    gap:11px;
-}
-
-.level{
-    display:grid;
-
-    grid-template-columns:
-        48px 1fr;
-
-    column-gap:15px;
-
-    align-items:center;
-
-    padding:20px;
-
-    background:#fff;
-
-    border:1px solid var(--border);
-
-    border-radius:12px;
-}
-
-.level-number{
-    grid-row:span 2;
-
-    color:var(--gold);
-
-    font-weight:900;
-}
-
-.level strong{
-    font-size:14px;
-
-    color:var(--green-dark);
-}
-
-.level small{
-    color:var(--muted);
-
-    font-size:10px;
-}
-
-/* =========================================================
-   QUOTE
-   ========================================================= */
-
-.quote-section{
-    padding:100px 20px;
-
-    background:#e6eee6;
-
-    text-align:center;
-}
-
-.quote-symbol{
-    font-family:Georgia,serif;
-
-    font-size:90px;
-
-    height:75px;
-
-    color:var(--gold);
-}
-
-.quote-text{
-    max-width:850px;
-
-    margin:auto;
-
-    font-family:Georgia,serif;
-
-    font-size:
-        clamp(27px,4vw,40px);
-
-    line-height:1.35;
-
-    font-style:italic;
-
-    color:var(--green-dark);
-}
-
-.quote-author{
-    display:block;
-
-    margin-top:22px;
-
-    color:var(--green);
-
-    font-size:11px;
-
-    font-weight:900;
-}
-
-/* =========================================================
-   SCHOLARS
-   ========================================================= */
-
-.scholar-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:20px;
-}
-
-.scholar-card{
-    background:#fff;
-
-    border:1px solid var(--border);
-
-    border-radius:15px;
-
-    text-align:center;
-
-    padding:35px;
-
-    transition:.3s;
-}
-
-.scholar-card:hover{
-    transform:translateY(-4px);
-
-    box-shadow:var(--shadow);
-}
-
-.scholar-avatar{
-    width:78px;
-    height:78px;
-
-    margin:0 auto 16px;
-
-    border-radius:50%;
-
-    display:grid;
-
-    place-items:center;
-
-    background:#dce9df;
-
-    color:var(--green);
-
-    font-family:Georgia,serif;
-
-    font-size:30px;
-}
-
-.scholar-card h3{
-    font-family:Georgia,serif;
-
-    font-size:22px;
-
-    color:var(--green-dark);
-}
-
-.scholar-card p{
-    color:var(--muted);
-
-    font-size:11px;
-
-    margin-top:5px;
-}
-
-/* =========================================================
-   LIVE
-   ========================================================= */
-
-.live-section{
-    margin-bottom:100px;
-
-    padding:55px 60px;
-
-    border-radius:20px;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--green),
-            #064330
-        );
-
-    color:#fff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:30px;
-
-    overflow:hidden;
-
-    position:relative;
-}
-
-.live-section::after{
-    content:"LIVE";
-
-    position:absolute;
-
-    right:-25px;
-    bottom:-55px;
-
-    font-family:Georgia,serif;
-
-    font-size:150px;
-
-    color:rgba(255,255,255,.04);
-}
-
-.live-kicker{
-    color:#d8bb70;
-
-    font-size:10px;
-
-    letter-spacing:2px;
-
-    font-weight:900;
-}
-
-.live-title{
-    font-family:Georgia,serif;
-
-    font-size:
-        clamp(30px,4vw,43px);
-
-    margin:8px 0;
-}
-
-.live-description{
-    color:#bdd0c8;
-
-    font-size:13px;
-}
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer{
-    background:#02140f;
-
-    color:#dce6e1;
-
-    padding:
-        65px 0 30px;
-}
-
-.footer-top{
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:50px;
-
-    flex-wrap:wrap;
-}
-
-.footer-brand{
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:13px;
-}
-
-.footer-logo{
-    width:43px;
-}
-
-.footer-brand-name{
-    font-family:Georgia,serif;
-
-    font-size:22px;
-
-    font-weight:700;
-}
-
-.footer-tagline{
-    margin-top:3px;
-
-    color:#80958c;
-
-    font-size:11px;
-}
-
-.footer-links{
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:22px;
-}
-
-.footer-links a{
-    color:#a9bbb4;
-
-    font-size:11px;
-
-    font-weight:700;
-}
-
-.footer-links a:hover{
-    color:#fff;
+  --bg:#1c1114;
+  --bg2:#241418;
+  --card:#2a181c;
+  --line:rgba(255,255,255,.09);
+  --red:#cf2a12;
+  --red-hi:#e23a1f;
+  --red-text:#d9381c;
+  --text:#f4eeee;
+  --muted:#b9a9ac;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--red-hi);outline-offset:3px}
+.container{width:min(1240px,92%);margin:auto}
+
+/* header */
+.header{position:sticky;top:0;z-index:50;height:84px;background:rgba(28,17,20,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.header-inner{height:100%;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-logo{width:40px;height:40px;object-fit:contain;border-radius:6px}
+.brand-name{font-weight:800;font-size:17px}
+.nav{display:flex;align-items:center;gap:6px;margin-left:10px}
+.nav a{padding:10px 18px;border-radius:8px;font-size:15px;font-weight:500;color:#e7dcde;transition:background .2s}
+.nav a:hover,.nav a.active{background:rgba(255,255,255,.12)}
+.header-actions{margin-left:auto;display:flex;align-items:center;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 24px;border-radius:7px;background:var(--red);border:1px solid var(--red);color:#fff;font-weight:700;font-size:15px;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--red-hi)}
+.btn-outline{background:transparent;border-color:var(--red);color:#fff}
+.btn-outline:hover{background:rgba(207,42,18,.18)}
+.menu-btn{display:none;margin-left:auto;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+
+/* hero */
+.hero{position:relative;min-height:calc(100vh - 84px);display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:40px;padding:60px 0 80px}
+.hero-title{font-family:var(--serif);font-weight:500;font-size:clamp(52px,6.4vw,92px);line-height:1;letter-spacing:-1.5px}
+.hero-title span{display:block;color:var(--red-text)}
+.hero-eyebrow{color:var(--muted);font-size:14px;margin-bottom:18px}
+.hero-description{max-width:470px;margin:34px 0;font-size:19px;line-height:1.6;color:#eee4e5}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* device mockup (pure CSS) */
+.devices{position:relative;height:520px}
+.monitor{position:absolute;right:4%;top:0;width:78%;aspect-ratio:16/10;background:#0e0809;border:7px solid #3a2b2e;border-radius:12px;box-shadow:0 40px 80px rgba(0,0,0,.5);padding:14px;display:grid;grid-template-columns:1.7fr 1fr;gap:12px}
+.monitor::after{content:"";position:absolute;left:50%;bottom:-70px;width:90px;height:64px;background:linear-gradient(#cfcfd2,#9a9a9f);transform:translateX(-50%);z-index:-1}
+.video{border-radius:8px;background:linear-gradient(135deg,#46605a,#1d2a27 60%,#3a2b24);position:relative;display:grid;place-items:center}
+.video i{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;color:#1c1114;font-style:normal;font-size:16px}
+.queue{display:grid;gap:8px;align-content:start}
+.queue b{height:34px;border-radius:6px;background:linear-gradient(90deg,#3b2c2f 28%,#2a1d20 28%)}
+.laptop{position:absolute;left:0;bottom:30px;width:62%;z-index:2}
+.laptop-screen{aspect-ratio:16/10;background:#0e0809;border:6px solid #3a2b2e;border-bottom:0;border-radius:10px 10px 0 0;padding:14px;text-align:center;font-size:11px;font-weight:700}
+.laptop-screen .banner{margin-top:8px;height:92px;border-radius:6px;background:linear-gradient(120deg,#6b4a2c,#2d1d17 70%);text-align:left;padding:10px;font-size:12px}
+.laptop-base{height:16px;background:linear-gradient(#e6e6e8,#a9a9ae);border-radius:0 0 14px 14px;margin:0 -4%}
+.phone{position:absolute;right:16%;bottom:10px;width:92px;height:190px;background:#0e0809;border:5px solid #3a2b2e;border-radius:16px;z-index:3;padding:10px 8px;font-size:8px;font-weight:700}
+.phone b{display:block;height:22px;border-radius:4px;background:#2d1f22;margin-top:6px}
+.tablet{position:absolute;right:0;bottom:30px;width:170px;height:240px;background:#0e0809;border:5px solid #3a2b2e;border-radius:14px;z-index:2;padding:10px;display:grid;gap:8px;align-content:start}
+.tablet b{height:70px;border-radius:6px;background:linear-gradient(135deg,#7a5a35,#2b1e1b)}
+
+/* stats + reviews */
+.proof{position:relative;border-top:1px solid var(--line);background:var(--bg2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%23cf2a12' stroke-opacity='.13'%3E%3Ccircle cx='60' cy='60' r='42'/%3E%3Ccircle cx='0' cy='0' r='42'/%3E%3Ccircle cx='120' cy='0' r='42'/%3E%3Ccircle cx='0' cy='120' r='42'/%3E%3Ccircle cx='120' cy='120' r='42'/%3E%3C/g%3E%3C/svg%3E")}
+.proof-inner{display:grid;grid-template-columns:auto 1fr;gap:70px;align-items:center;padding:56px 0}
+.stats{display:flex;gap:56px}
+.stat{text-align:center}
+.stat-number{display:block;font-family:var(--serif);font-size:54px;line-height:1.1}
+.stat-label{color:#e7dcde;font-size:17px}
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.review{display:flex;gap:18px;align-items:flex-start;padding:24px;border:1px solid var(--line);border-radius:18px;background:rgba(28,17,20,.8);font-size:15px}
+.avatar{flex:none;width:56px;height:56px;border-radius:50%;background:#4a3135;display:grid;place-items:center;font-family:var(--serif);font-size:24px}
+
+/* sections */
+.section{padding:100px 0}
+.section-alt{background:var(--bg2)}
+.section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:44px}
+.section-title{font-family:var(--serif);font-weight:500;font-size:clamp(36px,4.4vw,58px);line-height:1.05;letter-spacing:-1px}
+.section-title em{font-style:normal;color:var(--red-text)}
+.section-description{max-width:420px;color:var(--muted);font-size:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:32px;transition:border-color .2s}
+.card:hover{border-color:rgba(207,42,18,.55)}
+.card h3{font-family:var(--serif);font-weight:500;font-size:29px;line-height:1.15;margin-bottom:10px}
+.card p{color:var(--muted);font-size:15px;margin-bottom:22px}
+.card .link{color:var(--red-text);font-weight:700;font-size:14px}
+
+/* courses */
+.course{overflow:hidden;padding:0}
+.course-image{height:190px;padding:20px;display:flex;justify-content:space-between;align-items:flex-start;font-size:13px;font-weight:700;background:linear-gradient(135deg,#6b3a1f,#2a1518)}
+.course-image.two{background:linear-gradient(135deg,#7a1d10,#1f1214)}
+.course-image.three{background:linear-gradient(135deg,#3f3a2c,#1f1214)}
+.course-body{padding:26px}
+.course-body small{color:var(--muted)}
+.course-body h3{margin:6px 0 8px}
+.course-meta{color:var(--muted);font-size:14px;margin-bottom:16px}
+
+/* arabic */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.split .section-title{margin-bottom:22px}
+.split p{color:var(--muted);max-width:500px;margin-bottom:28px}
+.levels{display:grid;gap:12px}
+.level{display:flex;gap:18px;align-items:center;padding:22px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.level-dot{flex:none;width:12px;height:12px;border-radius:50%;background:var(--red)}
+.level strong{display:block;font-size:17px}
+.level small{color:var(--muted);font-size:14px}
+
+/* quote */
+.quote-section{padding:110px 20px;text-align:center;background:var(--red);color:#fff}
+.quote-text{max-width:860px;margin:auto;font-family:var(--serif);font-size:clamp(28px,4vw,46px);line-height:1.25}
+.quote-author{display:block;margin-top:22px;font-size:14px;font-weight:700;opacity:.85}
+
+/* scholars */
+.scholar{text-align:center}
+.scholar-avatar{width:84px;height:84px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;background:#4a3135;font-family:var(--serif);font-size:32px}
+.scholar h3{font-size:24px;margin-bottom:4px}
+.scholar p{margin:0}
+
+/* live */
+.live{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:56px 60px;border-radius:20px;background:linear-gradient(120deg,#8f1d0d,#3a1115);margin:0 auto 100px}
+.live h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,4vw,46px);line-height:1.1;margin:6px 0 8px}
+.live p{color:#f0d2cc}
+.btn-light{background:#fff;color:#1c1114;border-color:#fff}
+.btn-light:hover{background:#f1e4e2}
+
+/* footer */
+.footer{background:#120a0c;padding:64px 0 30px;color:#d8cacc}
+.footer-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.footer-brand{display:flex;gap:13px}
+.footer-logo{width:42px;height:42px;object-fit:contain}
+.footer-brand-name{font-family:var(--serif);font-size:24px}
+.footer-tagline{color:#8f7e81;font-size:13px}
+.footer-links{display:flex;flex-wrap:wrap;gap:22px;align-content:flex-start}
+.footer-links a{color:#b9a9ac;font-size:14px;font-weight:500}
+.footer-links a:hover{color:#fff}
+.footer-bottom{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);color:#7c6c6f;font-size:12px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* responsive */
+@media(max-width:1100px){
+  .proof-inner{grid-template-columns:1fr;gap:40px}
+  .stats{justify-content:space-around}
 }
-
-.footer-bottom{
-    margin-top:45px;
-
-    padding-top:22px;
-
-    border-top:
-        1px solid rgba(255,255,255,.08);
-
-    color:#667a72;
-
-    font-size:10px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:20px;
-}
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-@media(max-width:1050px){
-
-    .nav{
-        gap:15px;
-    }
-
-    .hero{
-        gap:30px;
-    }
-
-    .hero-title{
-        font-size:56px;
-    }
-
-}
-
 @media(max-width:900px){
-
-    .nav{
-        display:none;
-    }
-
-    .menu-btn{
-        display:block;
-    }
-
-    .hero{
-        grid-template-columns:1fr;
-
-        padding:
-            65px 0 75px;
-    }
-
-    .hero-content{
-        text-align:center;
-    }
-
-    .hero-description{
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .hero-actions,
-    .hero-features{
-        justify-content:center;
-    }
-
-    .hero-visual{
-        min-height:420px;
-    }
-
-    .path-grid,
-    .course-grid,
-    .scholar-grid{
-        grid-template-columns:1fr;
-    }
-
-    .split-section{
-        grid-template-columns:1fr;
-
-        gap:50px;
-    }
-
-    .section-heading{
-        display:block;
-    }
-
-    .section-description{
-        margin-top:15px;
-    }
-
-    .live-section{
-        display:block;
-    }
-
-    .live-section .btn{
-        margin-top:25px;
-    }
-
+  .nav{display:none}
+  .menu-btn{display:block}
+  .header-actions{display:none}
+  .hero{grid-template-columns:1fr;padding:50px 0 60px;min-height:auto}
+  .devices{height:430px}
+  .grid3,.reviews{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr;gap:44px}
+  .section-heading{display:block}
+  .section-description{margin-top:14px}
+  .live{display:block;padding:40px 28px}
+  .live .btn{margin-top:24px}
+  .section{padding:70px 0}
 }
-
-@media(max-width:650px){
-
-    .container{
-        width:90%;
-    }
-
-    .header{
-        height:72px;
-    }
-
-    .brand-name{
-        font-size:17px;
-    }
-
-    .brand-logo{
-        width:37px;
-        height:37px;
-    }
-
-    .header-actions .login-link{
-        display:none;
-    }
-
-    .header-actions .btn{
-        display:none;
-    }
-
-    .hero{
-        min-height:auto;
-
-        padding:
-            55px 0 65px;
-    }
-
-    .hero-title{
-        font-size:45px;
-
-        letter-spacing:-2px;
-    }
-
-    .hero-description{
-        font-size:15px;
-    }
-
-    .hero-features{
-        gap:12px;
-
-        font-size:10px;
-    }
-
-    .hero-visual{
-        min-height:370px;
-    }
-
-    .quran-card{
-        padding:34px 25px;
-    }
-
-    .quran-card h2{
-        font-size:23px;
-    }
-
-    .stats{
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .stat:nth-child(2){
-        border-right:0;
-    }
-
-    .stat:nth-child(3),
-    .stat:nth-child(4){
-        border-top:1px solid var(--border);
-    }
-
-    .section{
-        padding:70px 0;
-    }
-
-    .section-title{
-        font-size:37px;
-    }
-
-    .split-title{
-        font-size:39px;
-    }
-
-    .live-section{
-        margin-bottom:65px;
-
-        padding:38px 28px;
-    }
-
-    .footer-bottom{
-        display:block;
-    }
-
-    .footer-bottom span{
-        display:block;
-
-        margin-top:8px;
-    }
-
+@media(max-width:560px){
+  .hero-actions .btn{width:100%}
+  .stats{flex-wrap:wrap;gap:30px}
+  .stat{flex:1 1 40%}
+  .tablet{display:none}
+  .phone{right:4%}
+  .devices{height:340px}
 }
-
-@media(max-width:430px){
-
-    .hero-title{
-        font-size:40px;
-    }
-
-    .hero-actions{
-        flex-direction:column;
-    }
-
-    .hero-actions .btn{
-        width:100%;
-    }
-
-    .quran-card{
-        width:100%;
-    }
-
-}
-
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
-
 <body>
 
-<!-- =====================================================
-     HEADER
-     ===================================================== -->
-
 <header class="header">
-
 <div class="container header-inner">
-
-<a href="index.html" class="brand">
-
-<img
-    id="siteLogo"
-    class="brand-logo"
-    src="assets/logo.svg"
-    alt="Tabayyun TV Logo"
->
-
-<span
-    id="siteName"
-    class="brand-name"
->
-Tabayyun TV
-</span>
-
-</a>
-
-
-<nav class="nav">
-
-<a href="#quran">Quran</a>
-
-<a href="#arabic">Arabic</a>
-
-<a href="#tafsir">Tafsir</a>
-
-<a href="#courses">Courses</a>
-
-<a href="#scholars">Scholars</a>
-
-<a href="#library">Library</a>
-
-<a href="#live">Live</a>
-
-</nav>
-
-
-<div class="header-actions">
-
-<a
-    href="login.html"
-    class="login-link"
->
-Login
-</a>
-
-<a
-    href="#courses"
-    class="btn"
->
-Start Learning
-</a>
-
+  <a href="index.html" class="brand">
+    <img id="siteLogo" class="brand-logo" src="assets/logo.svg" alt="Tabayyun TV logo">
+    <span id="siteName" class="brand-name">Tabayyun TV</span>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="#quran" class="active">Explore</a>
+    <a href="#courses">Courses</a>
+    <a href="#arabic">Arabic</a>
+    <a href="#scholars">Scholars</a>
+    <a href="#live">Live</a>
+    <a href="#library">Library</a>
+  </nav>
+  <div class="header-actions">
+    <a href="login.html" class="btn btn-outline">Sign in to Tabayyun TV</a>
+    <a href="#courses" class="btn">Start Learning</a>
+  </div>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
 </div>
-
-
-<button
-    class="menu-btn"
-    id="menuBtn"
-    aria-label="Open Menu"
->
-☰
-</button>
-
-</div>
-
 </header>
-
 
 <main>
 
-<!-- =====================================================
-     HERO
-     ===================================================== -->
+<section class="container hero">
+  <div>
+    <div id="heroEyebrow" class="hero-eyebrow">Tabayyun TV • Quran &amp; Islamic Learning</div>
+    <h1 id="heroTitle" class="hero-title">Understand the Quran.<span>Discover the Guidance.</span></h1>
+    <p id="heroText" class="hero-description">Learn the Quran with clarity through structured lessons in Quran, Arabic, Tafsir, and Islamic knowledge — designed to help you learn, reflect, and grow.</p>
+    <div class="hero-actions">
+      <a href="login.html" class="btn btn-outline">Start learning today ▷</a>
+      <a href="#live" class="btn">Watch live</a>
+    </div>
+  </div>
 
-<section class="hero">
-
-<div class="container hero-content">
-
-<div class="hero-content">
-
-<div
-    id="heroEyebrow"
-    class="hero-label"
->
-TABAYYUN TV • QURAN & ISLAMIC LEARNING
-</div>
-
-
-<h1
-    id="heroTitle"
-    class="hero-title"
->
-
-Understand the Quran.
-<br>
-
-<span>
-Discover the Guidance.
-</span>
-
-</h1>
-
-
-<p
-    id="heroText"
-    class="hero-description"
->
-Learn the Quran with clarity through structured
-lessons in Quran, Arabic, Tafsir, and Islamic
-knowledge — designed to help you learn,
-reflect, and grow.
-</p>
-
-
-<div class="hero-actions">
-
-<a
-    href="#courses"
-    class="btn"
->
-Start Learning
-<span>→</span>
-</a>
-
-
-<a
-    href="#library"
-    class="btn btn-outline"
->
-Explore Library
-</a>
-
-</div>
-
-
-<div class="hero-features">
-
-<span>
-Structured learning
-</span>
-
-<span>
-Learn at your pace
-</span>
-
-<span>
-Live sessions
-</span>
-
-</div>
-
-</div>
-
-
-<div class="hero-visual">
-
-<div class="hero-glow"></div>
-
-
-<div class="quran-card">
-
-<div class="quran-decoration">
-۞
-</div>
-
-
-<div class="quran-symbol">
-۞
-</div>
-
-
-<div class="quran-label">
-QURANIC REFLECTION
-</div>
-
-
-<h2>
-“Indeed, this Qur'an
-<br>
-guides to that which is most upright.”
-</h2>
-
-
-<div class="quran-reference">
-Al-Isra • 17:9
-</div>
-
-
-<div class="mini-player">
-
-<div class="play-button">
-▶
-</div>
-
-
-<div class="mini-player-info">
-
-<strong>
-Continue learning
-</strong>
-
-<small>
-Surah Al-Baqarah · Lesson 12
-</small>
-
-</div>
-
-
-<div class="progress-number">
-68%
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+  <div class="devices" aria-hidden="true">
+    <div class="monitor">
+      <div class="video"><i>▶</i></div>
+      <div class="queue"><b></b><b></b><b></b><b></b><b></b></div>
+    </div>
+    <div class="laptop">
+      <div class="laptop-screen">Study the Quran subject by subject
+        <div class="banner">Surah Al-Baqarah<br>Lesson 12</div>
+      </div>
+      <div class="laptop-base"></div>
+    </div>
+    <div class="tablet"><b></b><b></b></div>
+    <div class="phone">My Learning<b></b><b></b><b></b></div>
+  </div>
 </section>
 
-
-<!-- =====================================================
-     STATS
-     ===================================================== -->
-
-<section class="stats">
-
-<div class="stat">
-
-<span class="stat-number">
-100+
-</span>
-
-<span class="stat-label">
-Lessons
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<span class="stat-number">
-25+
-</span>
-
-<span class="stat-label">
-Courses
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<span class="stat-number">
-15+
-</span>
-
-<span class="stat-label">
-Teachers
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<span class="stat-number">
-24/7
-</span>
-
-<span class="stat-label">
-Learning Library
-</span>
-
-</div>
-
+<section class="proof">
+  <div class="container proof-inner">
+    <div class="stats">
+      <div class="stat"><span class="stat-number">100+</span><span class="stat-label">Lessons</span></div>
+      <div class="stat"><span class="stat-number">25+</span><span class="stat-label">Courses</span></div>
+      <div class="stat"><span class="stat-number">15+</span><span class="stat-label">Teachers</span></div>
+      <div class="stat"><span class="stat-number">24/7</span><span class="stat-label">Library</span></div>
+    </div>
+    <div class="reviews">
+      <!-- Replace with real learner reviews -->
+      <div class="review"><div class="avatar">L</div><p>Add a real learner review here. Short, honest feedback about how the lessons helped them understand the Quran.</p></div>
+      <div class="review"><div class="avatar">S</div><p>Add a second learner review here. Keep it to two or three lines so the cards stay even.</p></div>
+    </div>
+  </div>
 </section>
 
-
-<!-- =====================================================
-     QURAN
-     ===================================================== -->
-
-<section
-    id="quran"
-    class="section"
->
-
-<div class="container">
-
-<div class="section-heading">
-
-<div>
-
-<div class="kicker">
-LEARN THE QURAN
-</div>
-
-<h2 class="section-title">
-Choose your learning path.
-</h2>
-
-</div>
-
-
-<p class="section-description">
-Explore structured pathways designed to make
-Quran learning clear, practical and consistent.
-</p>
-
-</div>
-
-
-<div class="path-grid">
-
-
-<article class="path-card featured">
-
-<div class="path-number">
-01
-</div>
-
-<h3>
-Surah by Surah
-</h3>
-
-<p>
-Study the Quran in a guided sequence
-with lessons, reflection and context.
-</p>
-
-<a
-    href="#courses"
-    class="path-link"
->
-Explore path →
-</a>
-
-</article>
-
-
-<article class="path-card">
-
-<div class="path-number">
-02
-</div>
-
-<h3>
-Topic by Topic
-</h3>
-
-<p>
-Discover Quranic guidance around faith,
-character, family, society and life.
-</p>
-
-<a
-    href="#courses"
-    class="path-link"
->
-Explore path →
-</a>
-
-</article>
-
-
-<article class="path-card">
-
-<div class="path-number">
-03
-</div>
-
-<h3>
-Quranic Arabic
-</h3>
-
-<p>
-Build the language foundation to
-understand the words of the Quran.
-</p>
-
-<a
-    href="#arabic"
-    class="path-link"
->
-Explore path →
-</a>
-
-</article>
-
-
-</div>
-
-</div>
-
+<section id="quran" class="section">
+  <div class="container">
+    <div class="section-heading">
+      <h2 class="section-title">Choose your <em>learning path</em></h2>
+      <p class="section-description">Structured pathways that make Quran learning clear, practical and consistent.</p>
+    </div>
+    <div class="grid3">
+      <article class="card"><h3>Surah by Surah</h3><p>Study the Quran in a guided sequence with lessons, reflection and context.</p><a href="#courses" class="link">Explore path</a></article>
+      <article class="card"><h3>Topic by Topic</h3><p>Discover Quranic guidance on faith, character, family, society and life.</p><a href="#courses" class="link">Explore path</a></article>
+      <article class="card"><h3>Quranic Arabic</h3><p>Build the language foundation to understand the words of the Quran.</p><a href="#arabic" class="link">Explore path</a></article>
+    </div>
+  </div>
 </section>
 
-
-<!-- =====================================================
-     COURSES
-     ===================================================== -->
-
-<section
-    id="courses"
-    class="section dark-section"
->
-
-<div class="container">
-
-<div class="section-heading">
-
-<div>
-
-<div class="kicker">
-FEATURED COURSES
-</div>
-
-<h2 class="section-title">
-Learn with purpose.
-</h2>
-
-</div>
-
-
-<a
-    href="#library"
-    class="view-link"
->
-View all courses →
-</a>
-
-</div>
-
-
-<div class="course-grid">
-
-
-<article class="course-card">
-
-<div class="course-image">
-
-<span class="course-category">
-QURAN
-</span>
-
-<span class="course-index">
-01
-</span>
-
-</div>
-
-
-<div class="course-content">
-
-<small>
-Quran Studies
-</small>
-
-<h3>
-Understanding Surah Al-Baqarah
-</h3>
-
-<div class="course-meta">
-24 lessons · 8h 45m
-</div>
-
-<a
-    href="login.html"
-    class="course-link"
->
-Start course →
-</a>
-
-</div>
-
-</article>
-
-
-<article class="course-card">
-
-<div class="course-image two">
-
-<span class="course-category">
-ARABIC
-</span>
-
-<span class="course-index">
-02
-</span>
-
-</div>
-
-
-<div class="course-content">
-
-<small>
-Quranic Arabic
-</small>
-
-<h3>
-Arabic From the Quran — Beginner
-</h3>
-
-<div class="course-meta">
-30 lessons · 10h 20m
-</div>
-
-<a
-    href="login.html"
-    class="course-link"
->
-Start course →
-</a>
-
-</div>
-
-</article>
-
-
-<article class="course-card">
-
-<div class="course-image three">
-
-<span class="course-category">
-TAFSIR
-</span>
-
-<span class="course-index">
-03
-</span>
-
-</div>
-
-
-<div class="course-content">
-
-<small>
-Tafsir
-</small>
-
-<h3>
-Reading the Quran With Context
-</h3>
-
-<div class="course-meta">
-18 lessons · 6h 15m
-</div>
-
-<a
-    href="login.html"
-    class="course-link"
->
-Start course →
-</a>
-
-</div>
-
-</article>
-
-
-</div>
-
-</div>
-
+<section id="courses" class="section section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <h2 class="section-title">Featured <em>courses</em></h2>
+      <a href="#library" class="link" style="color:var(--red-text);font-weight:700">View all courses</a>
+    </div>
+    <div class="grid3">
+      <article class="card course">
+        <div class="course-image"><span>Quran</span></div>
+        <div class="course-body"><small>Quran Studies</small><h3>Understanding Surah Al-Baqarah</h3><div class="course-meta">24 lessons · 8h 45m</div><a href="login.html" class="link">Start course</a></div>
+      </article>
+      <article class="card course">
+        <div class="course-image two"><span>Arabic</span></div>
+        <div class="course-body"><small>Quranic Arabic</small><h3>Arabic From the Quran — Beginner</h3><div class="course-meta">30 lessons · 10h 20m</div><a href="login.html" class="link">Start course</a></div>
+      </article>
+      <article class="card course">
+        <div class="course-image three"><span>Tafsir</span></div>
+        <div class="course-body"><small>Tafsir</small><h3>Reading the Quran With Context</h3><div class="course-meta">18 lessons · 6h 15m</div><a href="login.html" class="link">Start course</a></div>
+      </article>
+    </div>
+  </div>
 </section>
 
-
-<!-- =====================================================
-     ARABIC
-     ===================================================== -->
-
-<section
-    id="arabic"
-    class="section"
->
-
-<div class="container split-section">
-
-
-<div>
-
-<div class="kicker">
-QURANIC ARABIC
-</div>
-
-
-<h2 class="split-title">
-Go beyond reading.
-<br>
-Understand the words.
-</h2>
-
-
-<p class="split-description">
-Build your vocabulary, grammar and reading
-skills through a clear progression from
-beginner to advanced.
-</p>
-
-
-<a
-    href="#courses"
-    class="btn"
->
-Explore Arabic
-</a>
-
-</div>
-
-
-<div class="levels">
-
-
-<div class="level">
-
-<div class="level-number">
-01
-</div>
-
-<strong>
-Beginner
-</strong>
-
-<small>
-Letters · Words · Basic grammar
-</small>
-
-</div>
-
-
-<div class="level">
-
-<div class="level-number">
-02
-</div>
-
-<strong>
-Intermediate
-</strong>
-
-<small>
-Vocabulary · Syntax · Applied reading
-</small>
-
-</div>
-
-
-<div class="level">
-
-<div class="level-number">
-03
-</div>
-
-<strong>
-Advanced
-</strong>
-
-<small>
-Balaghah · Deep Quranic analysis
-</small>
-
-</div>
-
-
-</div>
-
-</div>
-
+<section id="arabic" class="section">
+  <div class="container split">
+    <div>
+      <h2 class="section-title">Go beyond reading. <em>Understand the words.</em></h2>
+      <p>Build your vocabulary, grammar and reading skills through a clear progression from beginner to advanced.</p>
+      <a href="#courses" class="btn">Explore Arabic</a>
+    </div>
+    <div class="levels">
+      <div class="level"><span class="level-dot"></span><div><strong>Beginner</strong><small>Letters, words, basic grammar</small></div></div>
+      <div class="level"><span class="level-dot"></span><div><strong>Intermediate</strong><small>Vocabulary, syntax, applied reading</small></div></div>
+      <div class="level"><span class="level-dot"></span><div><strong>Advanced</strong><small>Balaghah, deep Quranic analysis</small></div></div>
+    </div>
+  </div>
 </section>
 
-
-<!-- =====================================================
-     TAFSIR
-     ===================================================== -->
-
-<section
-    id="tafsir"
-    class="quote-section"
->
-
-<div class="quote-symbol">
-“
-</div>
-
-
-<blockquote class="quote-text">
-Learning is not only about knowing more.
-It is about seeing the guidance more clearly.
-</blockquote>
-
-
-<span class="quote-author">
-— TABAYYUN TV
-</span>
-
+<section id="tafsir" class="quote-section">
+  <blockquote class="quote-text">“Learning is not only about knowing more. It is about seeing the guidance more clearly.”</blockquote>
+  <span class="quote-author">Tabayyun TV</span>
 </section>
 
-
-<!-- =====================================================
-     SCHOLARS
-     ===================================================== -->
-
-<section
-    id="scholars"
-    class="section"
->
-
-<div class="container">
-
-<div class="section-heading">
-
-<div>
-
-<div class="kicker">
-OUR TEACHERS
-</div>
-
-<h2 class="section-title">
-Learn from trusted voices.
-</h2>
-
-</div>
-
-</div>
-
-
-<div class="scholar-grid">
-
-
-<article class="scholar-card">
-
-<div class="scholar-avatar">
-T
-</div>
-
-<h3>
-Teacher Profile
-</h3>
-
-<p>
-Quran & Tafsir
-</p>
-
-</article>
-
-
-<article class="scholar-card">
-
-<div class="scholar-avatar">
-A
-</div>
-
-<h3>
-Teacher Profile
-</h3>
-
-<p>
-Quranic Arabic
-</p>
-
-</article>
-
-
-<article class="scholar-card">
-
-<div class="scholar-avatar">
-S
-</div>
-
-<h3>
-Teacher Profile
-</h3>
-
-<p>
-Islamic Studies
-</p>
-
-</article>
-
-
-</div>
-
-</div>
-
+<section id="scholars" class="section">
+  <div class="container">
+    <div class="section-heading">
+      <h2 class="section-title">Learn from <em>trusted voices</em></h2>
+    </div>
+    <div class="grid3">
+      <article class="card scholar"><div class="scholar-avatar">T</div><h3>Teacher Profile</h3><p>Quran &amp; Tafsir</p></article>
+      <article class="card scholar"><div class="scholar-avatar">A</div><h3>Teacher Profile</h3><p>Quranic Arabic</p></article>
+      <article class="card scholar"><div class="scholar-avatar">S</div><h3>Teacher Profile</h3><p>Islamic Studies</p></article>
+    </div>
+  </div>
 </section>
 
-
-<!-- =====================================================
-     LIVE
-     ===================================================== -->
-
-<section
-    id="live"
-    class="container live-section"
->
-
-<div>
-
-<div class="live-kicker">
-LIVE LEARNING
-</div>
-
-<h2 class="live-title">
-Join a live class with Tabayyun TV.
-</h2>
-
-<p class="live-description">
-See upcoming sessions, lectures and
-interactive learning events.
-</p>
-
-</div>
-
-
-<a
-    href="login.html"
-    class="btn btn-gold"
->
-View Live Schedule →
-</a>
-
+<section id="live" class="container live">
+  <div>
+    <h2>Join a live class with Tabayyun TV</h2>
+    <p>See upcoming sessions, lectures and interactive learning events.</p>
+  </div>
+  <a href="login.html" class="btn btn-light">View live schedule</a>
 </section>
 
-
-<!-- =====================================================
-     LIBRARY
-     ===================================================== -->
-
-<section
-    id="library"
-    class="section"
-    style="padding-top:20px;"
->
-
-<div class="container">
-
-<div class="section-heading">
-
-<div>
-
-<div class="kicker">
-TABAYYUN LIBRARY
-</div>
-
-<h2 class="section-title">
-A growing library for lifelong learning.
-</h2>
-
-</div>
-
-<p class="section-description">
-Quran lessons, Arabic learning, Tafsir,
-Islamic studies and live sessions — all
-in one place.
-</p>
-
-</div>
-
-</div>
-
+<section id="library" class="container" style="padding-bottom:100px">
+  <div class="section-heading">
+    <h2 class="section-title">A growing library for <em>lifelong learning</em></h2>
+    <p class="section-description">Quran lessons, Arabic learning, Tafsir, Islamic studies and live sessions — all in one place.</p>
+  </div>
 </section>
 
 </main>
 
-
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
-
 <footer class="footer">
-
 <div class="container">
-
-<div class="footer-top">
-
-
-<div class="footer-brand">
-
-<img
-    id="footerLogo"
-    class="footer-logo"
-    src="assets/logo.svg"
-    alt="Tabayyun TV"
->
-
-
-<div>
-
-<div
-    id="footerName"
-    class="footer-brand-name"
->
-Tabayyun TV
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img id="footerLogo" class="footer-logo" src="assets/logo.svg" alt="Tabayyun TV">
+      <div>
+        <div id="footerName" class="footer-brand-name">Tabayyun TV</div>
+        <div class="footer-tagline">Learn. Reflect. Grow.</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#quran">Explore</a><a href="#courses">Courses</a><a href="#arabic">Arabic</a><a href="#tafsir">Tafsir</a><a href="#scholars">Scholars</a><a href="#library">Library</a><a href="#live">Live</a><a href="login.html">Login</a><a href="admin-login.html">Admin</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Tabayyun TV. All rights reserved.</span>
+    <span>Quran • Arabic • Tafsir • Islamic Learning</span>
+  </div>
 </div>
-
-<div class="footer-tagline">
-Learn. Reflect. Grow.
-</div>
-
-</div>
-
-</div>
-
-
-<div class="footer-links">
-
-<a href="#quran">
-Quran
-</a>
-
-<a href="#arabic">
-Arabic
-</a>
-
-<a href="#tafsir">
-Tafsir
-</a>
-
-<a href="#courses">
-Courses
-</a>
-
-<a href="#scholars">
-Scholars
-</a>
-
-<a href="#library">
-Library
-</a>
-
-<a href="#live">
-Live
-</a>
-
-<a href="login.html">
-Login
-</a>
-
-<a href="admin-login.html">
-Admin
-</a>
-
-</div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-<span>
-© 2026 Tabayyun TV. All rights reserved.
-</span>
-
-<span>
-Quran • Arabic • Tafsir • Islamic Learning
-</span>
-
-</div>
-
-</div>
-
 </footer>
 
-
-<!-- =====================================================
-     ADMIN SETTINGS LOADER
-
-     Admin panel থেকে saved settings থাকলে
-     logo / name / hero automatically change হবে।
-
-     Browser UI থেকে editing নেই।
-     ===================================================== -->
-
 <script>
-
 (function(){
-
-    "use strict";
-
-    const DEFAULTS = {
-
-        logo:
-            "assets/logo.svg",
-
-        name:
-            "Tabayyun TV",
-
-        eyebrow:
-            "TABAYYUN TV • QURAN & ISLAMIC LEARNING",
-
-        title:
-            "Understand the Quran.|Discover the Guidance.",
-
-        text:
-            "Learn the Quran with clarity through structured lessons in Quran, Arabic, Tafsir, and Islamic knowledge — designed to help you learn, reflect, and grow."
-
-    };
-
-
-    let settings = DEFAULTS;
-
-
-    try{
-
-        const saved =
-            localStorage.getItem(
-                "tabayyunSettings"
-            );
-
-
-        if(saved){
-
-            settings = {
-                ...DEFAULTS,
-                ...JSON.parse(saved)
-            };
-
-        }
-
-    }catch(error){
-
-        settings = DEFAULTS;
-
-    }
-
-
-    /* ================= LOGO ================= */
-
-    const logo =
-        document.getElementById("siteLogo");
-
-    const footerLogo =
-        document.getElementById("footerLogo");
-
-
-    if(logo && settings.logo){
-
-        logo.src =
-            settings.logo;
-
-    }
-
-
-    if(footerLogo && settings.logo){
-
-        footerLogo.src =
-            settings.logo;
-
-    }
-
-
-    /* ================= NAME ================= */
-
-    const siteName =
-        document.getElementById("siteName");
-
-    const footerName =
-        document.getElementById("footerName");
-
-
-    if(siteName && settings.name){
-
-        siteName.textContent =
-            settings.name;
-
-    }
-
-
-    if(footerName && settings.name){
-
-        footerName.textContent =
-            settings.name;
-
-    }
-
-
-    /* ================= HERO EYEBROW ================= */
-
-    const eyebrow =
-        document.getElementById("heroEyebrow");
-
-
-    if(eyebrow && settings.eyebrow){
-
-        eyebrow.textContent =
-            settings.eyebrow;
-
-    }
-
-
-    /* ================= HERO TITLE ================= */
-
-    const heroTitle =
-        document.getElementById("heroTitle");
-
-
-    if(heroTitle && settings.title){
-
-        const parts =
-            settings.title.split("|");
-
-
-        if(parts.length >= 2){
-
-            heroTitle.innerHTML =
-                parts[0].trim()
-                +
-                "<br>"
-                +
-                "<span>"
-                +
-                parts[1].trim()
-                +
-                "</span>";
-
-        }else{
-
-            heroTitle.textContent =
-                settings.title;
-
-        }
-
-    }
-
-
-    /* ================= HERO DESCRIPTION ================= */
-
-    const heroText =
-        document.getElementById("heroText");
-
-
-    if(heroText && settings.text){
-
-        heroText.textContent =
-            settings.text;
-
-    }
-
+  "use strict";
+  const DEFAULTS={
+    logo:"assets/logo.svg",
+    name:"Tabayyun TV",
+    eyebrow:"Tabayyun TV • Quran & Islamic Learning",
+    title:"Understand the Quran.|Discover the Guidance.",
+    text:"Learn the Quran with clarity through structured lessons in Quran, Arabic, Tafsir, and Islamic knowledge — designed to help you learn, reflect, and grow."
+  };
+  let s=DEFAULTS;
+  try{const saved=localStorage.getItem("tabayyunSettings");if(saved)s={...DEFAULTS,...JSON.parse(saved)};}catch(e){s=DEFAULTS;}
+  const $=id=>document.getElementById(id);
+  if(s.logo){$("siteLogo").src=s.logo;$("footerLogo").src=s.logo;}
+  if(s.name){$("siteName").textContent=s.name;$("footerName").textContent=s.name;}
+  if(s.eyebrow)$("heroEyebrow").textContent=s.eyebrow;
+  if(s.text)$("heroText").textContent=s.text;
+  if(s.title){
+    const p=s.title.split("|"),t=$("heroTitle");
+    if(p.length>=2){
+      t.textContent=p[0].trim();
+      const sp=document.createElement("span");sp.textContent=p[1].trim();t.appendChild(sp);
+    }else t.textContent=s.title;
+  }
 })();
 
-
-/* =========================================================
-   MOBILE MENU
-   ========================================================= */
-
-const menuBtn =
-    document.getElementById("menuBtn");
-
-
-const nav =
-    document.querySelector(".nav");
-
-
-if(menuBtn){
-
-    menuBtn.addEventListener(
-        "click",
-        function(){
-
-            if(nav.style.display === "flex"){
-
-                nav.style.display = "none";
-
-            }else{
-
-                nav.style.display = "flex";
-
-                nav.style.position = "absolute";
-
-                nav.style.top = "72px";
-
-                nav.style.left = "0";
-
-                nav.style.right = "0";
-
-                nav.style.padding = "20px";
-
-                nav.style.background =
-                    "rgba(247,245,238,.98)";
-
-                nav.style.flexDirection =
-                    "column";
-
-                nav.style.alignItems =
-                    "center";
-
-                nav.style.borderBottom =
-                    "1px solid #dfe6df";
-
-            }
-
-        }
-    );
-
-}
-
-
-/* =========================================================
-   CLOSE MOBILE NAV AFTER CLICK
-   ========================================================= */
-
-document.querySelectorAll(".nav a")
-.forEach(function(link){
-
-    link.addEventListener(
-        "click",
-        function(){
-
-            if(window.innerWidth <= 900){
-
-                nav.style.display =
-                    "none";
-
-            }
-
-        }
-    );
-
+const menuBtn=document.getElementById("menuBtn"),nav=document.getElementById("nav");
+function closeNav(){nav.removeAttribute("style");}
+menuBtn.addEventListener("click",function(){
+  if(nav.style.display==="flex"){closeNav();return;}
+  Object.assign(nav.style,{display:"flex",position:"absolute",top:"84px",left:"0",right:"0",padding:"16px",background:"rgba(28,17,20,.98)",flexDirection:"column",alignItems:"stretch",borderBottom:"1px solid rgba(255,255,255,.09)"});
 });
-
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{if(innerWidth<=900)closeNav();}));
 </script>
-
 </body>
 </html>
